@@ -37,6 +37,135 @@ Module1
 
 
 
+15-06-2021
+----------
+
+develop the server
+******************
+
+1) create the directory
+
+    Ex.
+        backend
+
+2) switch to backend directory
+
+        > cd backend
+
+
+3) download the node modules
+
+        => express
+
+                - express used to develop the rest apis.
+
+                    Ex.
+                            GET
+
+                            POST
+
+                            PUT
+
+                            DELETE
+
+                            HEAD
+
+                            ----
+                            ----
+                            ----
+
+        => mongoose
+
+                - used to connect to mongodb database with "schema"
+
+                - schema means rules and regulations.
+
+        => cors
+
+                - used to enable the "cors policy".
+
+        => body-parser
+
+                - used to receive the data from frontend(Angular) application
+
+        => encryptjs
+
+                - used to encrypt the passwords, before storing the databases.
+
+        => dotenv
+                - used to maintain the configuration files.
+
+
+        => express-async-handler
+
+                - used to develop the rest services in asynchronous manner.
+
+        => jsonwebtoken
+
+                - used to generate the tokens.
+
+                - in general, we will use these tokens for authentication purpose.
+
+                - these type of authentication we can call token based authentication.
+
+
+    - we will download above libraries by using either npm tool, or yarn tool.
+
+
+> yarn add express express-async-handler mongoose mongodb jsonwebtoken cors body-parser encryptjs dotenv --save
+
+Note : automatically above libraries downloads to node_modules directory in current path.
+
+
+4) create the modal
+
+        productModal.js
+
+        finally "Product" model is ready.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                            
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
