@@ -123,6 +123,31 @@ Note : automatically above libraries downloads to node_modules directory in curr
 
         finally "Product" model is ready.
 
+5) develop rest api
+
+        server.js
+
+
+6) start the server
+
+        > node server
+
+7) test the rest api by using Postman
+
+        > http://localhost:8080/api/products
+
+
+
+
+
+
+
+
+
+
+
+        
+
 
 
 
