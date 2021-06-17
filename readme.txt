@@ -137,6 +137,185 @@ Note : automatically above libraries downloads to node_modules directory in curr
         > http://localhost:8080/api/products
 
 
+8) install following angular version
+
+        > npm install -g @angular/cli@11.2.3
+
+
+9) create the angular application
+
+        > ng new frontend
+
+        frontend is the name of the angular application.
+
+
+10) switch to angular application
+
+        > cd frontend
+
+
+11) download the modules.
+
+     @ngrx/effects ===> 11.0.1
+
+     @ngrx/store   ===> 11.0.1
+
+     ng-http-loader     ===> 9.1.0
+
+
+                > yarn add @ngrx/effects@11.0.1 @ngrx/store@11.0.1 ng-http-loader@9.1.0 --save
+
+
+12) include "font-awasome CDN" in index.html
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+
+
+13) implement the state management
+
+       => model   (http://localhost:8080/api/products)
+
+       => service
+
+       => intreceptor
+
+       => actions
+
+       => effects
+
+       => reducer
+
+       => selector
+
+       => component
+
+       => CSS3 Flex Box Design & Media Queries
+
+       => custom module
+
+       => Single Page Applications
+
+       => configuration files   (read urls)
+
+       => unit test cases
+
+       => debugging
+
+       => AWS Deployment
+
+
+create the model
+----------------
+
+                ******************************************
+                frontend
+                        src
+                           app
+                              Home
+                                 model
+                                   product.model.ts
+                ******************************************
+
+                finally "Product" model is ready.
+
+
+create the service
+------------------
+
+        **************************************************
+        frontend
+               src
+                 app
+                   Home
+                     service  
+                        product.service.ts
+        **************************************************
+
+        finally "ProductService" is ready with "getProducts()" function
+
+create the intreceptor
+----------------------
+
+        intreceptor is used to make the "headers" to rest api calls.
+
+
+*****************************************
+frontend
+       src
+         app  
+           Home
+             intreceptor
+                product.intreceptor.ts
+******************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
