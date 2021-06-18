@@ -248,6 +248,12 @@ frontend
                 product.intreceptor.ts
 ******************************************
 
+                finally "productIntreceptor" is ready.
+
+
+
+                
+
 
 
 
