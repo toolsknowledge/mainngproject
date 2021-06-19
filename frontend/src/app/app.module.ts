@@ -1,16 +1,16 @@
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { productIntreceptor } from './Home/intreceptor/product.intreceptor';
-
+import { appRoutes } from './routes/app.routes';
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,RouterModule.forRoot(appRoutes)
   ],
   providers: [{
     provide:HTTP_INTERCEPTORS,

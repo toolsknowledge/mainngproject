@@ -254,6 +254,19 @@ frontend
 
                 
 
+19-06-2021
+==========
+create HomeComponent
+create HomeModule
+make the "HomeComponent" as" Default Component" in HomeModule.
+make the "HomeModule" as Default Module in "AppModule".
+
+
+
+
+
+
+
 
 
 
