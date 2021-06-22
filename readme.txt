@@ -263,6 +263,67 @@ make the "HomeModule" as Default Module in "AppModule".
 
 
 
+22-06-2021
+==========
+        implement the State management
+
+                => model
+
+                        - already we developed "Product" model
+
+                => actions
+
+                        *******************************************
+                        frontend
+                                src
+                                   app
+                                     Home
+                                        actions
+                                              home.actions.ts 
+                        ********************************************
+                                finally "HomeAction" enum is ready.
+
+                                and following classes also ready.
+
+                                                1) ProductsLoading
+
+                                                2) ProductsLoadingSucccess
+
+                                                3) ProductsLoadingFail
+
+                                                => HomeActionTypes 
+
+
+
+
+                => effects
+                        ************************************
+                        frontend
+                               src
+                                 app
+                                   Home
+                                     effects
+                                        home.effects.ts
+                        *************************************
+                                finally "HomeEffects" is ready with getProducts variable.
+
+                => reducer
+
+                => store
+
+                => selector
+
+                => dispatch & subscription in HomeComponent
+
+
+
+
+
+
+
+
+
+
 
 
 
