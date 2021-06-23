@@ -7,18 +7,17 @@ export enum HomeAction{
     ProductsLoadingFail = "[Product] Loading Fail"
 }
 export class ProductsLoading implements Action{
-    public readonly type:HomeAction.ProductsLoading;
+    public readonly type = HomeAction.ProductsLoading;
 }
 
 export class ProductsLoadingSucccess implements Action{
-    public readonly type:HomeAction.ProductsLoadingSucccess;
+    public readonly type = HomeAction.ProductsLoadingSucccess;
     constructor(public products:Product[]){}
 }
 
 export class ProductsLoadingFail implements Action{
-    public readonly type:HomeAction.ProductsLoadingFail; 
-    constructor(err:string){}  
+    public readonly type = HomeAction.ProductsLoadingFail; 
+    constructor(public err:string){}  
 }
 
 export type HomeActionTypes = ProductsLoading | ProductsLoadingSucccess | ProductsLoadingFail;
-

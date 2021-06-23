@@ -308,10 +308,28 @@ make the "HomeModule" as Default Module in "AppModule".
                                 finally "HomeEffects" is ready with getProducts variable.
 
                 => reducer
+                        **************************************
+                        frontend
+                              src
+                                app
+                                  Home
+                                     reducer
+                                        home.reducer.ts
+                        **************************************
+                        finally "HomeReducer" is ready.
 
                 => store
 
                 => selector
+                        ***************************************
+                        frontend
+                                src
+                                  app
+                                     Home
+                                        selector
+                                             home.selector.ts
+                        ***************************************
+                                finally "allProducts" selector is ready.
 
                 => dispatch & subscription in HomeComponent
 
