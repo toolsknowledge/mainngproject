@@ -1,0 +1,15 @@
+<!--
+    "rating" coming from Rest API Call
+
+    "numReviews" also coming from Rest API Call.
+-->
+
+<div>
+    <span [class]="rating_value==0?'far fa-star':(rating_value>0&&rating_value<1)?'fas fa-half-star-alt':'fas fa-star'"></span>
+    <span [class]="rating_value==1?'far fa-star':(rating_value>0&&rating_value<2)?'fas fa-half-star-alt':'fas fa-star'"></span>
+    <span [class]="rating_value==2?'far fa-star':(rating_value>0&&rating_value<3)?'fas fa-half-star-alt':'fas fa-star'"></span>
+    <span [class]="rating_value==3?'far fa-star':(rating_value>0&&rating_value<4)?'fas fa-half-star-alt':'fas fa-star'"></span>
+    <span [class]="rating_value==4?'far fa-star':(rating_value>0&&rating_value<5)?'fas fa-half-star-alt':'fas fa-star'"></span>
+    <span>{{numReviews}} Reviews</span>
+</div>
+ 
