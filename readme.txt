@@ -335,6 +335,32 @@ make the "HomeModule" as Default Module in "AppModule".
 
 
 
+24-06-2021
+==========
+create the common components
+
+*********************************************
+frontend
+       src  
+          app
+             common
+                 rating.component.ts
+                 rating.component.html
+*********************************************
+
+Empty Star ===> far fa-star
+
+Half Start ===> fas fa-star-half-alt
+
+Full Star  ===> fas fa-star
+
+
+
+
+
+
+
+
 
 
 

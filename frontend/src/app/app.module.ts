@@ -14,8 +14,7 @@ import { appRoutes } from './routes/app.routes';
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes),
-    NgHttpLoaderModule.forRoot()
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [{
     provide:HTTP_INTERCEPTORS,

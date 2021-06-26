@@ -1,1 +1,66 @@
-/* You can add global styles to this file, and also import other style files */
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    font-size: 1.6rem;
+    margin: 0;
+    /* height: 100vh; */
+    font-family: sans-serif;
+}
+
+
+.grid-container{
+    display: grid;
+    grid-template-areas: 
+        "header"
+        "main"
+        "footer";
+    height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 5rem 1fr 5rem;
+}
+
+header{
+    grid-area: "header";
+    background-color: #203040;
+}
+
+main{
+    grid-area: "main";
+    padding: 1rem;
+}
+
+footer{
+    grid-area: "footer";
+    background-color: #203040;
+    color: #ffffff;
+}
+
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a{
+    color: #ffffff;
+    text-decoration: none;
+    margin: 10px;
+}
+
+a.brand{
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+
+a:hover{
+    color: #ffa500;
+}
+
+.center{
+    justify-content: center;
+}
