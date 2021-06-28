@@ -9,8 +9,8 @@ import { productIntreceptor } from './Home/intreceptor/product.intreceptor';
 import { appRoutes } from './routes/app.routes';
 @NgModule({
   declarations: [
-    AppComponent,
-    RatingComponent
+    AppComponent
+    
   ],
   imports: [
     BrowserModule,

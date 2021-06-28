@@ -1,2 +1,22 @@
 <ng-http-loader></ng-http-loader>
-<h1>{{loading}}.....{{products | json}}....{{error}}</h1>
+<div class="row center">
+    <div *ngFor="let product of products">
+       <div class="card">
+           <a>
+               <img src={{product.image}}>
+           </a>
+
+           <div class="card-body">
+               <h1>{{product.name}}</h1>
+               
+               <rating_bar [rating_value]="product.rating" 
+                           [numReviews]="product.numReviews"></rating_bar>
+               
+                <div class="price">
+                    Price $ {{product.price}}
+                </div>
+           </div>
+       </div> 
+    </div>
+</div>
+<!-- <h1>{{loading}}.....{{products | json}}....{{error}}</h1> -->

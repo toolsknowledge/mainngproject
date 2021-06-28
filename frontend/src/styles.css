@@ -64,3 +64,37 @@ a:hover{
 .center{
     justify-content: center;
 }
+
+.card{
+    border: 0.1rem solid #c0c0c0;
+    background-color: #f8f8f8;
+    border-radius: 0.5rem;
+    margin: 1rem;      
+}
+
+.rating span{
+    color: #ecb00a;
+    margin: 0.1rem;
+}
+
+.rating span:last-child{
+    color: #000000;
+}
+
+.price{
+    font-size: 2rem;
+}
+
+.card-body{
+    text-align: center;
+}
+
+h2{
+    font-size: 1.6rem;
+}
+
+
+
+
+
+

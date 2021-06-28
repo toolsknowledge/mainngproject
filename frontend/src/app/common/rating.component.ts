@@ -6,6 +6,10 @@ import { Component, Input } from "@angular/core";
     templateUrl : "./rating.component.html"
 })
 export class RatingComponent{
-    @Input() rating_value;
+    @Input() product_rating;
     @Input() numReviews;
+    constructor(){
+        console.log("in constructor");
+    }
+    
 }
