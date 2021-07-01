@@ -2,7 +2,7 @@
 <div class="row center">
     <div *ngFor="let product of products">
        <div class="card">
-           <a>
+           <a [routerLink]="['/detail',product._id]">
                <img src={{product.image}}>
            </a>
 
