@@ -358,6 +358,105 @@ Full Star  ===> fas fa-star
 
 
 
+AWS Deployment
+==============
+1) install aws cli tool
+
+        website : https://aws.amazon.com/cli/
+
+        file    : AWSCLIV2.msi
+
+
+2) create the secuirity and authority credentials to upload angular project to aws
+
+        IAM
+
+
+3) prepare the angular build
+
+        > ng build
+
+        once if build is ready, automatically "dist" folder will create in current location.
+
+
+4) create the s3 bucket
+
+        {
+                "Version": "2012-10-17",
+                "Statement": [
+                        {
+                        "Sid": "PublicReadGetObject",
+                        "Effect": "Allow",
+                        "Principal": "*",
+                        "Action": [
+                                "s3:GetObject"
+                        ],
+                        "Resource": [
+                                "arn:aws:s3:::ashokitmainproject/*"
+                        ]
+                        }
+                ]
+	}
+
+
+5) perform CI/CD Operation from angular project to "aws" server
+
+        package.json
+
+
+        "aws-deploy":"aws s3 sync dist/frontend/ s3://ashokitmainproject"
+
+
+6) execute the following commnads to perform CI/CD Operations
+
+        > aws configure
+
+        > ng build && npm run aws-deploy
+
+
+
+Assignment Question
+===================
+Detail
+        1) model
+
+        2) service
+
+                => http://localhost:8080/api/products/{id}
+
+        3) actions
+
+        4) effects
+
+        5) reducer
+
+        6) selector
+
+        7) dispatch & subscription in DetailComponent
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

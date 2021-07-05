@@ -64,6 +64,21 @@ app.get("/api/products",express_async_handler(async (req,res)=>{
 }));
 
 
+//create the rest api based on product id
+app.get("/api/products/:id",express_async_handler(async (req,res)=>{
+    const product = await Product.findOne(mongoose.Types.ObjectId(req.params.id));
+    if(!product){
+        res.status(400).send({"message":"product not available"});
+    }else{
+        res.status(200).send(product);
+    }
+}));
+
+
+
+
+
+
 
 //assign the port number
 let port = process.env.PORT || 8080;
