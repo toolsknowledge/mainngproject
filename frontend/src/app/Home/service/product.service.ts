@@ -13,7 +13,7 @@ export class ProductService{
     }
 
     public getProducts():Observable<Product[]>{
-        return this.http.get<Product[]>(environment.baseURL+"/api/products");
+        return this.http.get<Product[]>(environment.baseURL+"/products");
     }
 
 };

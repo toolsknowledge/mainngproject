@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  baseURL:"http://sreenutechws-env.eba-dqjwnwzn.ap-south-1.elasticbeanstalk.com"
+  baseURL:"http://localhost:8080/api"
 };
 
 /*

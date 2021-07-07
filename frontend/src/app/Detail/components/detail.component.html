@@ -1,1 +1,33 @@
-{{message}}
+<!--
+    top
+
+    col-2
+
+    large
+-->
+
+<ng-http-loader></ng-http-loader>
+<div>
+    <a><i class="fas fa-home" style="color: burlywood;"></i></a>
+    <div class="row top">
+        <div class="col-2">
+            <img src={{message.image}} class="large" alt={{message.name}}>
+        </div>
+
+        <div class="col-1">
+            <ul>
+                <li>
+                    {{message.name}}
+                </li>
+                <li>
+                    <!-- <rating_bar [product_rating]="message.rating" [numReviews]="message.numReviews"></rating_bar> -->
+                </li>
+            </ul>
+        </div>
+
+        <div class="col-1">
+
+        </div>
+    </div>
+
+</div>
