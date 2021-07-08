@@ -1,17 +1,17 @@
 import { CommonModule } from "@angular/common";
+import { HttpClientModule } from "@angular/common/http";
 import { NgModule } from "@angular/core";
+import { FormsModule } from "@angular/forms";
 import { RouterModule } from "@angular/router";
 import { NgHttpLoaderModule } from "ng-http-loader";
-import { RatingComponent } from "src/app/common/rating.component";
+import { RatingComponent } from "../../common/rating.component";
 import DetailComponent from "../components/detail.component";
 
 @NgModule({
-    declarations:[DetailComponent
-                 ],
+    declarations:[DetailComponent],
     imports:[CommonModule,
              RouterModule.forChild([{path:"",component:DetailComponent}]),
-             NgHttpLoaderModule.forRoot()
-             ],
+             FormsModule],
     providers:[],
     exports:[DetailComponent]
 })

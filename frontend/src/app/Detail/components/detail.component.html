@@ -6,9 +6,9 @@
     large
 -->
 
-<ng-http-loader></ng-http-loader>
+<!-- <ng-http-loader></ng-http-loader> -->
 <div>
-    <a><i class="fas fa-home" style="color: burlywood;"></i></a>
+    <a [routerLink]="['/']"><i class="fas fa-home" style="color: burlywood;"></i></a>
     <div class="row top">
         <div class="col-2">
             <img src={{message.image}} class="large" alt={{message.name}}>
@@ -22,11 +22,52 @@
                 <li>
                     <!-- <rating_bar [product_rating]="message.rating" [numReviews]="message.numReviews"></rating_bar> -->
                 </li>
+                <li>
+                    {{message.description}}
+                </li>
+                <li>
+                    Price $ {{message.price}}
+                </li>
             </ul>
         </div>
 
         <div class="col-1">
+            <div class="card card-body">
+                <ul>
+                    <li>
+                        <div class="row">
+                            <div>Price</div>
+                            <div class="price">$ {{message.price}}</div>
+                        </div>
+                    </li>
 
+                    <li>
+                        <div class="row">
+                            <div>Availability</div>
+                            <div *ngIf="message.countInStock>0" class="success">In Stock</div>
+                            <div *ngIf="message.countInStock<=0" class="danger">Out Of Stock</div>
+                        </div>
+                    </li>
+
+                   
+                    <div *ngIf="message.countInStock>0">
+                        <li>
+                            <div class="row">
+                                <div>Qty</div>
+                                <select [(ngModel)]="qty">
+                                    <option *ngFor="let x of dropdown_values">
+                                        {{x}}
+                                    </option>
+                                </select>
+                            </div>
+                        </li>
+                        <li>
+                            <button (click)="addToCart()" class="primary block">Add to Card</button>
+                        </li>
+                    </div>
+                    
+                </ul>
+            </div>
         </div>
     </div>
 
