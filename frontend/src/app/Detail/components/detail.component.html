@@ -1,12 +1,4 @@
-<!--
-    top
-
-    col-2
-
-    large
--->
-
-<!-- <ng-http-loader></ng-http-loader> -->
+<ng-http-loader></ng-http-loader>
 <div>
     <a [routerLink]="['/']"><i class="fas fa-home" style="color: burlywood;"></i></a>
     <div class="row top">
@@ -20,7 +12,7 @@
                     {{message.name}}
                 </li>
                 <li>
-                    <!-- <rating_bar [product_rating]="message.rating" [numReviews]="message.numReviews"></rating_bar> -->
+                    <rating_bar [product_rating]="message.rating" [numReviews]="message.numReviews"></rating_bar>
                 </li>
                 <li>
                     {{message.description}}
@@ -62,7 +54,7 @@
                             </div>
                         </li>
                         <li>
-                            <button (click)="addToCart()" class="primary block">Add to Card</button>
+                            <button (click)="addToCart(message._id)" class="primary block">Add to Card</button>
                         </li>
                     </div>
                     

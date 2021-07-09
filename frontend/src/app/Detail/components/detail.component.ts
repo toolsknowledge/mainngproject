@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { ActivatedRoute } from "@angular/router";
+import { ActivatedRoute, Router } from "@angular/router";
 
 @Component({
     selector : "detail",
@@ -11,7 +11,8 @@ export default class DetailComponent{
     dropdown_values:number[] = [];
 
 
-    constructor(private route:ActivatedRoute){
+    constructor(private route:ActivatedRoute,
+                private route1:Router){
         console.log( this.route.snapshot.params.id );
         //this.message = this.route.snapshot.params.id;
         this.qty = 1;
@@ -33,8 +34,9 @@ export default class DetailComponent{
         }
     }
 
-    addToCart(){
-        console.log(this.qty);
+    addToCart(id){
+        console.log(id);
+        this.route1.navigate([`/cart/${id}/${this.qty}`]);
     }
 
 

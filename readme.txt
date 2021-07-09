@@ -436,6 +436,95 @@ Detail
 
 
 
+09-07-2021
+==========
+
+                        RatingComponent
+
+                        sharedModule
+
+
+
+
+HomeModule                                      DetailModule
+
+
+
+                                                CartModule
+                                                ==========
+
+        => navigate from DetailModule to CartModule with (_id & qty)
+
+
+
+********************************************************************
+frontend
+       src
+         app
+           Cart
+             component
+                cart.component.ts
+                cart.component.html
+
+            module
+                cart.module.ts
+
+            actions
+                cart.actions.ts
+
+            effects
+                cart.effects.ts
+
+           reducer
+                cart.reducer.ts
+
+           selector
+                cart.selector.ts
+
+           ----
+           ----
+           ----
+           
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
