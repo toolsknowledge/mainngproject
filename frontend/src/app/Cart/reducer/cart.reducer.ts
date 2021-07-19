@@ -8,10 +8,20 @@ export default interface CartInterface{
 };
 
 
+let localstorage_data;
+let str = window.localStorage.getItem("cart");
+if(str === null ){
+    localstorage_data = [];
+}else{
+    let arr = JSON.parse(str);
+    localstorage_data = arr;
+}
+
+
 const initialState:CartInterface = {
     loading:false,
     error:"",
-    finalItems:[]
+    finalItems:localstorage_data
 };
 
 

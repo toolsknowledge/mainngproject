@@ -154,6 +154,13 @@ select:hover {
   border: 0.1rem #404040 solid;
 }
 
+.badge{
+    background-color: orange;
+    padding: 0.5rem;
+    border-radius: 60%;
+    margin-left: 0.5rem;
+}
+
 
 
 

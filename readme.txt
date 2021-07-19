@@ -453,226 +453,43 @@ HomeModule                                      DetailModule
                                                 CartModule
                                                 ==========
 
-        => navigate from DetailModule to CartModule with (_id & qty)
+        => at prrsent we are in CartModule
 
+        => in CartModule we have _id & qty
 
+***********************************************************
+Cart
+    model
+        cart.model.ts                           => finally "CartModel" is ready.
 
-********************************************************************
-frontend
-       src
-         app
-           Cart
-             component
-                cart.component.ts
-                cart.component.html
+    service
+        cart.service.ts                         => finally "CartService" is ready with getCartData() function
 
-            module
-                cart.module.ts
+    actions
+        cart.actions.ts                        => finally "CartActions" is ready
 
-            actions
-                cart.actions.ts
+                                                        @CartLoading
+                                                        @CartLoadingSuccess
+                                                        @CartLoadingFail
 
-            effects
-                cart.effects.ts
+    effects                                     => finally "CartEffets" is ready with "getCartItems" function
+        cart.effects.ts
 
-           reducer
-                cart.reducer.ts
+    reducer     
+        cart.reducer.ts                         => finally "cartReducer" is ready
 
-           selector
-                cart.selector.ts
+    selector
+        cart.selector.ts                        => finally "cartSelector" is ready
 
-           ----
-           ----
-           ----
-           
+    module
+        cart.module.ts                          => finally "cartModule" is ready
 
+    components  
+        cart.component.ts                       => 
+        cart.component.html
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                            
-
-
-
+    index.ts
+****************************************************************************
 
 
 
