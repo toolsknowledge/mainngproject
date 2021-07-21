@@ -1,4 +1,4 @@
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
@@ -10,6 +10,7 @@ import { CartEffets } from './Cart/effects/cart.effects';
 import { cartReducer } from './Cart/reducer/cart.reducer';
 import CartService from './Cart/services/cart.service';
 import { RatingComponent } from './common/rating.component';
+import { sharedModule } from './common/shared.module';
 import { productIntreceptor } from './Home/intreceptor/product.intreceptor';
 import { appRoutes } from './routes/app.routes';
 @NgModule({
@@ -20,7 +21,8 @@ import { appRoutes } from './routes/app.routes';
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
-   
+    StoreModule.forRoot({}),
+    EffectsModule.forRoot([])
   ],
   providers: [
     {
