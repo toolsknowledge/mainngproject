@@ -14,16 +14,16 @@ export class AppComponent {
   str:any;
   finalArray:any[];
 
-  constructor(private store:Store<CartInterface>){
-      const result = this.store.pipe(select(allActions.cartSelector));
-      result.subscribe((res)=>{
-        this.arr = res.finalItems.length
-      })
-  }
-
-  // constructor(){
-  //     this.arr = window.localStorage.getItem("cart") === null ? 0 : JSON.parse(window.localStorage.getItem("cart")).length;
+  // constructor(private store:Store<CartInterface>){
+  //     const result = this.store.pipe(select(allActions.cartSelector));
+  //     result.subscribe((res)=>{
+  //       this.arr = res.finalItems.length
+  //     })
   // }
+
+  constructor(){
+      this.arr = window.localStorage.getItem("cart") === null ? 0 : JSON.parse(window.localStorage.getItem("cart")).length;
+  }
 
 
 }

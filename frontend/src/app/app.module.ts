@@ -21,8 +21,7 @@ import { appRoutes } from './routes/app.routes';
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
-    StoreModule.forRoot({}),
-    EffectsModule.forRoot([])
+    
   ],
   providers: [
     {

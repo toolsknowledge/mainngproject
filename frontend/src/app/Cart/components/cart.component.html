@@ -1,2 +1,47 @@
 <ng-http-loader></ng-http-loader>
-<h1>{{loading}}....{{error}}....{{finalArray | json}}</h1>
+<div class="row top">
+    <div class="col-2">
+        <h1>Shopping Cart</h1>
+        <div *ngIf="finalArrayItems==0">
+            <h5>Cart is Empty.<a [routerLink]="['/']">Start Shopping</a></h5>
+        </div>
+        <div>
+            <ul *ngFor="let item of finalArray">
+                <li>
+                    <div class="row">
+                        <div>
+                            <img src={{item.image}} alt={{item.name}} class="small">
+                        </div>
+                        <div>
+                            <a [routerLink]="['/detail',item._id]"><span class="cart_a">{{item.name}}</span></a>
+                        </div>
+                        <div>
+                            <select></select>
+                        </div>
+                        <div>
+                            $ {{item.price}}
+                        </div>
+                        <div>
+                            <i class="fa fa-trash" 
+                               style="color: lightcoral;font-size: 2rem;" (click)="deleteItem(item._id)">
+                                
+                            </i>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-1">
+        <div class="card card-body">
+            <ul>
+                <li>
+                    <h2>Total Number of Items {{finalArrayItems}}</h2>
+                </li>
+                <li>
+                    <button class="primary block">Proceed to pay</button>
+                </li>
+            </ul>      
+        </div>  
+    </div>
+</div>

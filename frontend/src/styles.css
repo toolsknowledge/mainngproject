@@ -161,6 +161,36 @@ select:hover {
     margin-left: 0.5rem;
 }
 
+img.small{
+    max-width: 5rem;
+    width: 100%;
+}
+
+.cart_a{
+    color: blue;
+    align-items: center;
+    justify-content: center;
+}
+
+.trash_symbol{
+    cursor:"pointer";
+    color:"#0000ff";
+    font-size:"2rem";
+}
+
+button.primary {
+    background-color: #f0c040;
+    padding: 5px;
+    border: 1px solid #808080;
+    border-radius: 10px;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  button.block {
+    width: 90%;
+  }
+
 
 
 

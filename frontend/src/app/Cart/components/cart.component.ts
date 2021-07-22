@@ -15,6 +15,7 @@ export class cartComponent{
     loading:boolean;
     error:string;
     finalArray:any;
+    finalArrayItems:number;
     constructor(private route:ActivatedRoute,
                 private store:Store<CartInterface>,
                 private spinner:SpinnerVisibilityService){
@@ -32,7 +33,13 @@ export class cartComponent{
             this.loading = res.loading;
             this.error = res.error;
             this.finalArray = res.finalItems;
+            this.finalArrayItems = res.finalItems.length;
+            //this.finalArrayItems = 0;
             this.spinner.hide();
         });
+    }
+
+    deleteItem(id:any){
+        console.log(id);
     }
 }
