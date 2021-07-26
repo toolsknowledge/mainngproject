@@ -31,4 +31,14 @@ export class CartEffets{
                         return of(new allActions.CartLoadingFail("Network Error"))
                     })))
         );
+
+
+        @Effect()
+        public removeItem = this.actions.pipe(
+            ofType("[Cart] Remove Item"),
+            map((id:any)=> ({type: "[Cart] Remove Item", "id":id}) )
+        );
+
+
+
 };

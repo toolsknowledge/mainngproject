@@ -491,6 +491,62 @@ Cart
     index.ts
 ****************************************************************************
 
+1) model
+
+2) service
+
+3) actions
+
+4) effects
+
+5) reducer
+
+6) selector
+
+7) components
+
+
+
+Removing ITEMS from cart
+========================
+
+1) model
+        cartremove.model.ts
+
+                finally "CartRemove" model is ready
+
+2) action
+        cart.actions.ts
+
+
+3) effects
+        cart.effects.ts
+
+
+4) reducer
+        cart.reducer.ts                 ( filter() <== id )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -4,6 +4,7 @@ import { select, Store } from "@ngrx/store";
 import CartInterface from "../reducer/cart.reducer";
 import * as allActions from "../.";
 import { SpinnerVisibilityService } from "ng-http-loader";
+import CartRemove from "../model/cartremove.model";
 
 @Component({
     selector:"cart",
@@ -40,6 +41,13 @@ export class cartComponent{
     }
 
     deleteItem(id:any){
-        console.log(id);
+        //dispatch
+        this.store.dispatch({
+            type : "CART_REMOVE_ITEM",
+            payload : <CartRemove>{
+                id:id,
+                qty : this.qty
+            }
+        })
     }
 }

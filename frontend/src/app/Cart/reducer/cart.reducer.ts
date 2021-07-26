@@ -24,11 +24,20 @@ const initialState:CartInterface = {
     finalItems:localstorage_data
 };
 
-
+export const CART_REMOVE_ITEM:string = "CART_REMOVE_ITEM";
 
 export function cartReducer(state=initialState,action:allActions.CartActionTypes | any):CartInterface{
     switch(action.type){
-       
+
+
+      case CART_REMOVE_ITEM:
+           
+            return{
+                ...state,
+                finalItems : state.finalItems.filter((element)=> {return element._id != action.payload.id } )  
+            }
+            break;
+            
         case allActions.CartActions.CartLoadingSuccess:
             const item = action.payload;
         
@@ -54,6 +63,7 @@ export function cartReducer(state=initialState,action:allActions.CartActionTypes
                     loading:true
                 }
             }
+            break;
        
         default:
             return state;
