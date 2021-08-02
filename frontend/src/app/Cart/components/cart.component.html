@@ -16,15 +16,18 @@
                             <a [routerLink]="['/detail',item._id]"><span class="cart_a">{{item.name}}</span></a>
                         </div>
                         <div>
-                            <select></select>
+                            <!-- <select (change)="myFun(item)">
+                                <option>{{item.countInStock}}</option>
+                            </select> -->
+                            <option>{{item.countInStock}}</option>
                         </div>
                         <div>
+                            
                             $ {{item.price}}
                         </div>
                         <div>
                             <i class="fa fa-trash" 
                                style="color: lightcoral;font-size: 2rem;" (click)="deleteItem(item._id)">
-                                
                             </i>
                         </div>
                     </div>
@@ -36,10 +39,10 @@
         <div class="card card-body">
             <ul>
                 <li>
-                    <h2>Total Number of Items {{finalArrayItems}}</h2>
+                    <h2>Total Number of  {{grandTotalNumOfItems}} Items and Grand Total Price $  {{grandTotalPrice}}</h2>
                 </li>
                 <li>
-                    <button class="primary block">Proceed to pay</button>
+                    <button class="primary block" (click)="proceedToPayment(grandTotalPrice)">Proceed to pay</button>
                 </li>
             </ul>      
         </div>  

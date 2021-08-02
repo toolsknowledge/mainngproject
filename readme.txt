@@ -546,9 +546,22 @@ Removing ITEMS from cart
 
 
 
+=> Calculate the Total Price     (reduce)
 
 
+=> Resolve the NgRx Issue
 
+
+=> Dropdown Issue
+
+
+=> Payment Gateways
+
+
+=> Forms
+
+
+=> Operators   (map(), pipe(), switch())   RxJS Operatord
 
 
 
