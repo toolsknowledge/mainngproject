@@ -46,7 +46,7 @@ export class cartComponent{
             this.finalArrayItems = res.finalItems.length;
 
             this.grandTotalNumOfItems = this.finalArray.reduce((accumalator:number,item:any)=> accumalator+item.qty,0);
-            this.grandTotalPrice = this.finalArray.reduce((accumalator:any,item:any)=> accumalator + item.qty*item.price,0);
+            this.grandTotalPrice = this.finalArray.reduce((accumalator:number,item:any)=> accumalator+(item.qty*item.price),0);
             console.log(typeof this.grandTotalNumOfItems);
 
 
@@ -76,6 +76,6 @@ export class cartComponent{
 
     proceedToPayment(totalPrice:any){
         console.log(totalPrice);
-        this.router.navigate(["/payment"]);
+        this.router.navigate(["/signin"]);
     }
 }

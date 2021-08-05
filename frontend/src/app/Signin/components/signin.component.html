@@ -1,0 +1,22 @@
+<form [formGroup]="userDetails" (ngSubmit)="login()" class="form">
+    <div>
+        <h1>Signin</h1>
+    </div>
+    <div>
+        <label>Email</label>
+        <input type="email" formControlName="email" required>
+    </div>
+    <div>
+        <label>Password</label>
+        <input type="password" formControlName="password" required>
+    </div>
+    <div>
+        <label></label>
+        <button type="submit" class="primary">Signin</button>
+    </div>
+    <div>
+        <label></label>
+        <div>New Customer ? {{" "}} <a [routerLink]="['/register']" style="color: blue;">Create New Account</a></div>
+    </div>
+</form>
+
