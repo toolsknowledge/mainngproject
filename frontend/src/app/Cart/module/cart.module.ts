@@ -10,14 +10,18 @@ import { cartComponent } from "../components/cart.component";
 import { CartEffets } from "../effects/cart.effects";
 import { cartReducer } from "../reducer/cart.reducer";
 import CartService from "../services/cart.service";
+import { SharedStateModule } from "../../common/sharedstate.module";
 
 @NgModule({
     declarations:[cartComponent],
     imports:[CommonModule,
              RouterModule.forChild([{path:"",component:cartComponent}]),
              HttpClientModule,
-             StoreModule.forRoot({"cart":cartReducer}),
-             EffectsModule.forRoot([CartEffets]),
+             StoreModule.forRoot({}),
+             EffectsModule.forRoot([]),
+            //  StoreModule.forFeature("cart",cartReducer),
+            //  EffectsModule.forFeature([EffectsModule]),
+             SharedStateModule,
              NgHttpLoaderModule.forRoot()],
     providers:[CartService],
     exports:[cartComponent]

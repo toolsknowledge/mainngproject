@@ -22,8 +22,7 @@ export class AppComponent {
   // }
 
   constructor(){
-      this.arr = window.localStorage.getItem("cart") === null ? 0 : JSON.parse(window.localStorage.getItem("cart")).length;
+      //this.arr = window.localStorage.getItem("cart") === null ? 0 : JSON.parse(window.localStorage.getItem("cart")).length;
   }
-
 
 }

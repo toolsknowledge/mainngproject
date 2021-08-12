@@ -13,15 +13,20 @@ import { RatingComponent } from './common/rating.component';
 import { sharedModule } from './common/shared.module';
 import { productIntreceptor } from './Home/intreceptor/product.intreceptor';
 import { appRoutes } from './routes/app.routes';
+//import { SharedStateModule } from "./common/sharedstate.module";
+import { cartModule } from "./Cart/module/cart.module";
+
 @NgModule({
   declarations: [
     AppComponent
-    
   ],
   imports: [
-    BrowserModule,
     RouterModule.forRoot(appRoutes),
-    
+    BrowserModule,
+    //cartModule, 
+    //StoreModule.forRoot({}),
+    //EffectsModule.forRoot([]),   
+    HttpClientModule
   ],
   providers: [
     {
